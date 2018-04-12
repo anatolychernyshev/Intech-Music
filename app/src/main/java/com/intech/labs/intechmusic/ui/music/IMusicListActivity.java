@@ -20,4 +20,6 @@ public interface IMusicListActivity extends BaseView, ILoading {
     void openPlayerActivity(int position);
 
     void showError();
+
+    void hideHelperText();
 }

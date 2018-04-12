@@ -49,6 +49,7 @@ public class MusicListPresenter<V extends IMusicListActivity> extends BasePresen
         }
 
         mLastSearchQuery = query;
+        mView.hideHelperText();
         updateAdapterList(query);
     }
 
@@ -57,7 +58,7 @@ public class MusicListPresenter<V extends IMusicListActivity> extends BasePresen
         if (newText.length() < 5) return;
 
         mLastSearchQuery = newText;
-
+        mView.hideHelperText();
         mCompositeDisposable.add(
                 mMusicRepository
                         .getSongList(newText)

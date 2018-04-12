@@ -93,7 +93,6 @@ public class MusicListActivity extends AppCompatActivity implements IMusicListAc
 
     @Override
     public void updateList(List<Song> songs) {
-        mHelperTextView.setVisibility(View.INVISIBLE);
         mMusicListAdapter.updateList(songs);
     }
 
@@ -114,6 +113,11 @@ public class MusicListActivity extends AppCompatActivity implements IMusicListAc
     public void showError() {
         Snackbar.make(findViewById(R.id.music_list_container), R.string.error,
                 Snackbar.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void hideHelperText() {
+        mHelperTextView.setVisibility(View.INVISIBLE);
     }
 
     @Override
