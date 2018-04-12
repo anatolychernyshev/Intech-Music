@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Intech Music</string>
     <string name="search">Search</string>
+    <string name="error">Error</string>
     <string name="query_length_error"><![CDATA[Query length < 5 symbols]]></string>
     <string name="music_list_text_view">Enter at least 5 symbols in search query</string>
     <string name="itunes_preview">ITunes Preview</string>

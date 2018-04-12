@@ -18,4 +18,6 @@ public interface IMusicListActivity extends BaseView, ILoading {
     void showIncorrectLengthError();
 
     void openPlayerActivity(int position);
+
+    void showError();
 }

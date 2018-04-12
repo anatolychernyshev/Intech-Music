@@ -111,6 +111,12 @@ public class MusicListActivity extends AppCompatActivity implements IMusicListAc
     }
 
     @Override
+    public void showError() {
+        Snackbar.make(findViewById(R.id.music_list_container), R.string.error,
+                Snackbar.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void showProgressBar() {
         mProgressBar.setVisibility(View.VISIBLE);
     }

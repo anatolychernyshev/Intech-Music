@@ -66,6 +66,9 @@ public class MusicListPresenter<V extends IMusicListActivity> extends BasePresen
                         .subscribe(response -> {
                             mMusicRepository.setSongList(response.getSongs());
                             mView.updateList(response.getSongs());
+                        }, error -> {
+                            mView.showError();
+                            mView.hideProgressBar();
                         }));
     }
 
@@ -83,6 +86,9 @@ public class MusicListPresenter<V extends IMusicListActivity> extends BasePresen
                         .subscribe(response -> {
                             mMusicRepository.setSongList(response.getSongs());
                             mView.updateList(response.getSongs());
+                            mView.hideProgressBar();
+                        }, error -> {
+                            mView.showError();
                             mView.hideProgressBar();
                         }));
     }
